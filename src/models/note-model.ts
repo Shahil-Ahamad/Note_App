@@ -2,7 +2,7 @@ type TNoteStatus = "not_started" | "in_progress" | "done";
 
 type TNote = {
   id: number;
-  Title:string;
+  Title: string;
   name: string;
   status: TNoteStatus;
 };
@@ -10,7 +10,7 @@ type TNote = {
 const Notes: TNote[] = [
   {
     id: 1,
-    Title:"Note 1",
+    Title: "Note 1",
     name: "Making an Note App using Typescript & express",
     status: "in_progress",
   },
@@ -24,7 +24,7 @@ export class NoteModel {
     return Notes.find((Note) => Note.id === NoteId);
   }
 
-  createNote(Title:string,name: string, status: TNoteStatus) {
+  createNote(Title: string, name: string, status: TNoteStatus) {
     const newNote: TNote = {
       id: Notes.length + 1,
       Title,
@@ -50,7 +50,7 @@ export class NoteModel {
     return Notes;
   }
 
-  updateNote(NoteId: number, Title:string,name: string, status: TNoteStatus) {
+  updateNote(NoteId: number, Title: string, name: string, status: TNoteStatus) {
     const NoteIndex = Notes.findIndex((Note) => Note.id === NoteId);
 
     if (NoteIndex === -1) {

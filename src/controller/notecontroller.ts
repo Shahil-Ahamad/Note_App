@@ -37,7 +37,7 @@ export function createNoteController(
   res: Response,
   next: NextFunction
 ) {
-  const {Title, name, status } = req.body;
+  const { Title, name, status } = req.body;
 
   if (!Title || !name || !status) {
     res.status(400).json({
@@ -103,7 +103,7 @@ export function updateNoteController(
   next: NextFunction
 ) {
   const noteId = req.query.noteId;
-  const {Title, name, status } = req.body;
+  const { Title, name, status } = req.body;
 
   if (!noteId || !name || !status) {
     res.status(400).json({
